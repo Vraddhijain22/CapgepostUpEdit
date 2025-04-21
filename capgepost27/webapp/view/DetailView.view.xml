@@ -5,28 +5,28 @@
     xmlns:f="sap.ui.layout.form">
     <Page id="idDetail" title="Detail">
         <content>
-            <f:SimpleForm id="createForm" editable="true" layout="ResponsiveGridLayout">
+            <f:SimpleForm id="DetForm" editable="true" layout="ResponsiveGridLayout">
             
                 <Label text="{i18n>Carrid}"/>
-                <Input id="carridInput" value="{Carrid}"/>
+                <Text id="carridText" text="{CustomerModel>Carrid}"/>
  
                 <Label text="{i18n>Connid}"/>
-                <Input id="connidInput" value="{Connid}"/>
+                <Text id="connidText" text="{CustomerModel>Connid}"/>
  
                 <Label text="{i18n>Fldate}"/>
-                <DatePicker id="fldateInput" value="{Fldate}" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd"/>
+                <Text id="fldateText" text="{CustomerModel>Fldate}" />
  
                 <Label text="{i18n>Bookid}"/>
-                <Input id="bookidInput" value="{Bookid}"/>
+                <Text id="bookidText" text="{CustomerModel>Bookid}"/>
  
                 <Label text="{i18n>OrderDate}"/>
-                <DatePicker id="orderDateInput" value="{OrderDate}" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd"/>
+                <Text id="orderDateText" text="{CustomerModel>OrderDate}" />
             </f:SimpleForm>
         </content>
         <footer>
             <OverflowToolbar>
                 <ToolbarSpacer/>
-                <Button text="Edit" press="onEdit"/>
+                <Button text="{i18n>Edit}" press="onEdit"></Button>
             </OverflowToolbar>
         </footer>
     </Page>

@@ -6,7 +6,7 @@ sap.ui.define([
 ], (Controller,Filter,FilterOperator,MessageBox) => {
     "use strict";
  
-    return Controller.extend("app.capgepost27.controller.CustomerViewb27", {
+    return Controller.extend("app.capgepost27.controller.DetailView", {
         onInit() {
             let oRouter=this.getRouter()
             oRouter.attachRoutePatternMatched(this._onRouteMatched, this)
@@ -22,17 +22,11 @@ sap.ui.define([
         onEdit:function(){
             let oRouter=this.getRouter()
             oRouter.navTo("RouteUpdateView",{
-                indexUpdate: this.index
+                indexUpdate:this.index
 
             })
         }
 
-        
-
-        
-         
- 
-        
    
     });
 });

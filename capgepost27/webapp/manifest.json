@@ -81,8 +81,10 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
+      },
+      "CustomerModel":{
+        "type":"sap.ui.model.json.JSONModel"
       }
-
     },
     "resources": {
       "css": [
@@ -120,14 +122,14 @@
         },
         {
           "name": "RouteDetailView",
-          "pattern": "detail/(indexDetail)",
+          "pattern": "detail/{indexDetail}",
           "target": [
             "TargetDetailView"
           ]
         },
         {
           "name": "RouteUpdateView",
-          "pattern": "Update/(indexUpdate)",
+          "pattern": "update/(indexUpdate)",
           "target": [
             "TargetUpdateView"
           ]

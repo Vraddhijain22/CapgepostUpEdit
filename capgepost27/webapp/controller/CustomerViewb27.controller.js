@@ -13,10 +13,10 @@ sap.ui.define([
 
             oModel.read(entity, {
                 success: (odata, resp) => {
-                    // let jModel =this.getOwnerComponent().getModel("CustomerModel")
-                    // jModel.setData(odata.results)
-                    let oModelJs = new sap.ui.model.json.JSONModel(odata.results);
-                    this.getView().setModel(oModelJs, "CustomerModel");
+                    let jModel =this.getOwnerComponent().getModel("CustomerModel")
+                    jModel.setData(odata.results)
+                    // let oModelJs = new sap.ui.model.json.JSONModel(odata.results);
+                    // this.getView().setModel(oModelJs, "CustomerModel");
                 },
                 error: (error) => {
                     console.error("Error reading data: ", error);

@@ -3,30 +3,31 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form">
-    <Page id="idUpdate" title="Update">
-        <content>
-            <f:SimpleForm id="createForm" editable="true" layout="ResponsiveGridLayout">
-            
-                <Label text="{i18n>Carrid}"/>
-                <Input id="carridInput" value="{Carrid}"/>
+    <Page id="idUpdate" title="{i18n>titleUpdate}">
+        <content/>
+         <f:SimpleForm editable="true">
+            <Label text="Carrid" ></Label>
+        <Input value="{CustomerModel>Carrid}" id="CarridInput"></Input>
+       
+        <Label text="Connid"></Label>
+        <Input value="{CustomerModel>Connid}" id="ConnidInput"></Input>
+       
+        <Label text="Fldate"></Label>
+        <Input value="{CustomerModel>Fldate}" id="FldateInput" type="Date"></Input>
+       
+        <Label text="Bookid" required="true"></Label>
+        <Input value="{CustomerModel>Bookid}" editable="true" id="BookidInput"></Input>
  
-                <Label text="{i18n>Connid}"/>
-                <Input id="connidInput" value="{Connid}"/>
+        <Label text="Orderdate"></Label>
+        <Input value="{CustomerModel>OrderDate}" id="OrderDateInput" type="Date"></Input>
+        
+        <Button text="{i18n>Update}" press="onUpdate" width="80px"></Button>
  
-                <Label text="{i18n>Fldate}"/>
-                <DatePicker id="fldateInput" value="{Fldate}" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd"/>
- 
-                <Label text="{i18n>Bookid}"/>
-                <Input id="bookidInput" value="{Bookid}"/>
- 
-                <Label text="{i18n>OrderDate}"/>
-                <DatePicker id="orderDateInput" value="{OrderDate}" displayFormat="yyyy-MM-dd" valueFormat="yyyy-MM-dd"/>
-            </f:SimpleForm>
-        </content>
+     
+    </f:SimpleForm>
         <footer>
             <OverflowToolbar>
                 <ToolbarSpacer/>
-                <Button text="Edit" press="onEdit"/>
             </OverflowToolbar>
         </footer>
     </Page>
