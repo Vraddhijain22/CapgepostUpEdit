@@ -14,14 +14,28 @@ sap.ui.define([
 
             oModel.read(entity, {
                 success: (odata, resp) => {
-                    let oModelJs = new sap.ui.model.json.JSONModel(odata.results);
-                    this.getView().setModel(oModelJs, "CustomerModel");
+                    // let oModelJs = new sap.ui.model.json.JSONModel(odata.results);
+                    // this.getView().setModel(oModelJs, "CustomerModel");
+                    let jModel =this.getOwnerComponent().getModel("CustomerModel");
+                    jModel.setData(odata.results)
+                    
                 },
                 error: (error) => {
                     console.error("Error reading data: ", error);
                     // Additional error handling logic
                 }
             });
+        },
+
+        onRowSelection:function(oEvent){
+            let oItem=oEvent.getParameter("listItem")
+            let oContext=oItem.getBindingContextPath("CustomerModel")
+            let aItems=oContext.split("/") //array items
+            let index=aItems[aItems.length-1]
+            let oRouter=this.getRouter()
+            oRouter.navTo("RouteDetailView",{
+                indexDetail:index
+            })
         },
 
         onDelete:function(oEvent){

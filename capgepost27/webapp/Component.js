@@ -21,7 +21,7 @@ sap.ui.define([
 
             // enable routing
             this.getRouter().initialize();
-            this.getRouter().navTo("RouteCustomerView")
+            this.getRouter().navTo("RouteCustomerViewb27")
             
         }
     });

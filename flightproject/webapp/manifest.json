@@ -57,7 +57,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.134.1",
       "libs": {
@@ -80,6 +80,9 @@
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
+      },
+      "CustomerModel":{
+        "type":"sap.ui.model.json.JSONModel"
       }
     },
     "resources": {
@@ -115,7 +118,22 @@
           "target": [
             "TargetCreateView"
           ]
+        },
+        {
+          "name": "RouteDetailView",
+          "pattern": "detail/{indexDetail}",
+          "target": [
+            "TargetDetailView"
+          ]
+        },
+        {
+          "name": "RouteUpdateView",
+          "pattern": "update/{indexUpdate}",
+          "target": [
+            "TargetUpdateView"
+          ]
         }
+
       ],
       "targets": {
         "TargetFlightview": {
@@ -125,6 +143,14 @@
         "TargetCreateView": {
           "viewId": "idCreatePage",
           "viewName": "CreateView"
+        },
+        "TargetDetailView": {
+          "viewId": "idDetail",
+          "viewName": "DetailView"
+        },
+        "TargetUpdateView": {
+          "viewId": "idUpdate",
+          "viewName": "UpdateView"
         }
       }
     },

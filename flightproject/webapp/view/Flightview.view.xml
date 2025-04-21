@@ -28,7 +28,7 @@
                 </comp:filterItems>
             </comp:FilterBar>
  
-            <Table id="table" items="{CustomerModel>/}">
+            <Table id="table" items="{CustomerModel>/}" mode="SingleSelectMaster" selectionChange="onRowSelection">
                 <columns>
                     <Column>
                         <Text text="{i18n>Carrid}"/>

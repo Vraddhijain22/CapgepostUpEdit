@@ -9,8 +9,8 @@ sap.ui.define([
         getRouter: function(){
             return this.getOwnerComponent().getRouter()
         },
-        getModel:function(){
-            return this.getOwnerComponent().getModel()
+        getModel:function(model){
+            return this.getOwnerComponent().getModel(model)
         }
     });
   });

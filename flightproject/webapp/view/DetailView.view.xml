@@ -1,0 +1,52 @@
+<mvc:View controllerName="app.flightproject.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="idDetail" title="Detail">
+        <content>
+            <f:SimpleForm id="DetForm" editable="true" layout="ResponsiveGridLayout">
+            
+                <Label text="{i18n>Carrid}"/>
+                <Text id="carridText" text="{CustomerModel>Carrid}"/>
+ 
+                <Label text="{i18n>Connid}"/>
+                <Text id="connidText" text="{CustomerModel>Connid}"/>
+ 
+                <Label text="{i18n>Fldate}"/>
+                <Text id="fldateText" text="{CustomerModel>Fldate}" />
+ 
+                <Label text="{i18n>Bookid}"/>
+                <Text id="bookidText" text="{CustomerModel>Bookid}"/>
+ 
+                <Label text="{i18n>OrderDate}"/>
+                <Text id="orderDateText" text="{CustomerModel>OrderDate}" />
+
+                <Label text="{i18n>Passname}"/>
+                <Text id="passnameText" text="{CustomerModel>Passname}"/>
+ 
+                <Label text="{i18n>Countryto}"/>
+                <Text id="countrytoText" text="{CustomerModel>Countryto}"/>
+
+                <Label text="{i18n>Countryfr}"/>
+                <Text id="countryfrText" text="{CustomerModel>Countryfr}"/>
+
+                <Label text="{i18n>Price}"/>
+                <Text id="priceText" text="{CustomerModel>Price}"/>
+
+                <Label text="{i18n>Currency}"/>
+                <Text id="currencyText" text="{CustomerModel>Currency}"/>
+ 
+ 
+ 
+ 
+            </f:SimpleForm>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="{i18n>Edit}" press="onEdit"></Button>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

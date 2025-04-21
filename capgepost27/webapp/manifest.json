@@ -129,7 +129,7 @@
         },
         {
           "name": "RouteUpdateView",
-          "pattern": "update/(indexUpdate)",
+          "pattern": "update/{indexUpdate}",
           "target": [
             "TargetUpdateView"
           ]

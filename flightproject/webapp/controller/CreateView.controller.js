@@ -1,8 +1,8 @@
 sap.ui.define([
     "./BaseController",
-    "sap/ui/core/mvc/Controller",
+    // "sap/ui/core/mvc/Controller",
     "sap/m/MessageBox"
-  ], (BaseController, Controller, MessageBox) => {
+  ], (Controller, MessageBox) => {
     "use strict";
   
     return Controller.extend("app.flightproject.controller.CreateView", {
@@ -51,6 +51,7 @@ sap.ui.define([
   
             let oModel = this.getOwnerComponent().getModel();
             let entity = "/zvraddhi_22Set";
+            // let that=this
   
             oModel.create(entity, payload, {
                 success: function () {

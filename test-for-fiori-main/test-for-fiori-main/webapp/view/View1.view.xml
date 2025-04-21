@@ -1,7 +1,0 @@
-<mvc:View controllerName="app.testprojectui5b27.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    <Button id="idbtn" text="Hi BTP"></Button>
-    </Page>
-</mvc:View>
