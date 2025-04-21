@@ -1,0 +1,43 @@
+<mvc:View controllerName="app.splitapp.controller.MasterView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+        <Page id="idMasterView" title="List View">
+        <headerContent>
+            <Button icon="sap-icon://action" tooltip="Share" press="onDetailView"/>
+            <Button icon="sap-icon://sort"  press="onSortItems"/>
+            <Button icon="https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg" press="onPress"/>
+        </headerContent>
+        <subHeader>
+            <OverflowToolbar>
+                <SearchField search="onSearch" liveChange="onSearch"/>
+            </OverflowToolbar>
+        </subHeader>
+        <content>
+            <List id= "toolList" items="{ToolModel>/toolDetails/}" mode="SingleSelectMaster" selectionChange="onItemSelect">
+                <items>
+                    <ObjectListItem icon="{ToolModel>image}" intro="{ToolModel>toolsName}" number="{parts:[{path:'ToolModel>price'},{path:'ToolModel>unit'}],
+                    formatter:'.someVariable.formatUnit'}" numberState= "{= ${ToolModel>availability} === 'In Stock' ? 'Success' : 'Error'}">
+                        <attributes>
+                            <ObjectAttribute text="{ToolModel>toolsName}" title="Tool Name"/>
+                            <ObjectAttribute text="{ToolModel>availability}" title="Availability"/>
+                            <ObjectAttribute text="{ToolModel>weight}" title="Weight"/>
+                            <ObjectAttribute text="{ToolModel>warranty}" title="Warranty"/>
+                        </attributes>
+                        <firstStatus>
+                            <ObjectStatus text="{ToolModel>availability}" title="Availability"
+                                state="{= ${ToolModel>availability} === 'In Stock' ? 'Success' : 'Error'}"/>
+                        </firstStatus>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+               
+                
+                <Button text="Create"  press="onFormView"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

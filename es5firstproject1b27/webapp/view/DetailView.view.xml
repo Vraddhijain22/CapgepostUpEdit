@@ -1,0 +1,38 @@
+<mvc:View controllerName="app.es5firstproject1b27.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Page id="idDetailView" title="{i18n>title}" showNavButton="true" navButtonPress="onListView">
+        <Table items="{SalesModel>/}" id="idTab">
+            <columns>
+                <Column>
+                    <Text text="CustomerID" />
+                </Column>
+                <Column>
+                    <Text text="CustomerName" />
+                </Column>
+                <Column>
+                    <Text text="GrossAmount" />
+                </Column>
+                <Column>
+                    <Text text="CurrencyCode" />
+                </Column>
+                <Column>
+                    <Text text="NetAmount" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{SalesModel>CustomerID}" />
+                        <Text text="{SalesModel>CustomerName}" />
+                        <Text text="{SalesModel>GrossAmount}" />
+                        <Text text="{SalesModel>CurrencyCode}" />
+                        <Text text="{SalesModel>NetAmount}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        <content />
+    </Page>
+</mvc:View>

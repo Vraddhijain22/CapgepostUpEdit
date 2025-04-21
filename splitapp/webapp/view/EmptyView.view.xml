@@ -1,0 +1,9 @@
+<mvc:View controllerName="app.splitapp.controller.DetailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="idEmpty" title="Empty View">
+        <content>
+            <!-- You can add content here if needed -->
+        </content>
+    </Page>
+</mvc:View>

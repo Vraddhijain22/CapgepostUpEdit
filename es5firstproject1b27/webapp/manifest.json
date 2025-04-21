@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.17.1",
-      "toolsId": "01876d49-2b0e-4870-8409-1c262fe9825f"
+      "toolsId": "9e7d09bf-dcec-4d7d-a7d2-f71a58bbb6f5"
     },
     "dataSources": {
       "mainService": {
@@ -107,6 +107,13 @@
           "target": [
             "TargetView1"
           ]
+        },
+        {
+          "name": "RouteDetailView",
+          "pattern": "RouteDetailView/{index}",
+          "target": [
+            "TargetDetailView"
+          ]
         }
       ],
       "targets": {
@@ -116,6 +123,13 @@
           "clearControlAggregation": false,
           "viewId": "View1",
           "viewName": "View1"
+        },
+        "TargetDetailView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "idDetailView",
+          "viewName": "DetailView"
         }
       }
     },
